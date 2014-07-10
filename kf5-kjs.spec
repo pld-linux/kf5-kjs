@@ -22,6 +22,8 @@ BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	qt5-linguist
 BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
