@@ -1,0 +1,10 @@
+--- kjs-5.4.0/KF5JSConfig.cmake.in~	2014-10-31 21:18:21.000000000 +0100
++++ kjs-5.4.0/KF5JSConfig.cmake.in	2014-12-09 23:43:23.825678331 +0100
+@@ -3,6 +3,6 @@
+ find_dependency(Qt5Core @REQUIRED_QT_VERSION@)
+ 
+ set(KJS_HAVE_PCRE_REGEX "@PCRE_FOUND@")
+-set(KJS_CREATE_HASH_TABLE "${PACKAGE_PREFIX_DIR}/@KF5_DATA_INSTALL_DIR@/kjs/create_hash_table")
++set(KJS_CREATE_HASH_TABLE "@KF5_DATA_INSTALL_DIR@/kjs/create_hash_table")
+ 
+ include("${CMAKE_CURRENT_LIST_DIR}/KF5JSTargets.cmake")
