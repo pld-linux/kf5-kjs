@@ -1,19 +1,15 @@
-# TODO:
-# - dir /usr/include/KF5 not packaged
-# /usr/share/kf5 not packaged
-%define		kdeframever	5.4
+%define		kdeframever	5.10
 %define		qtver		5.3.2
 %define		kfname		kjs
 
 Summary:	Javascript engine
 Name:		kf5-%{kfname}
-Version:	5.4.0
-Release:	0.1
+Version:	5.10.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	c8066f2d86bb1230b676582198a923ea
-Patch0:		kf5-kjs-absolute.patch
+# Source0-md5:	d46bb44cb0def7813e5302cffed92e98
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
@@ -49,7 +45,6 @@ Pliki nagłówkowe dla programistów używających %{kfname}.
 
 %prep
 %setup -q -n %{kfname}-%{version}
-%patch0 -p1
 
 %build
 install -d build
@@ -78,9 +73,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/kf5/kjs
 %{_datadir}/kf5/kjs/create_hash_table
 %attr(755,root,root) %ghost %{_libdir}/libKF5JS.so.5
-%attr(755,root,root) %{_libdir}/libKF5JS.so.5.4.0
+%attr(755,root,root) %{_libdir}/libKF5JS.so.*.*
 %attr(755,root,root) %ghost %{_libdir}/libKF5JSApi.so.5
-%attr(755,root,root) %{_libdir}/libKF5JSApi.so.5.4.0
+%attr(755,root,root) %{_libdir}/libKF5JSApi.so.*.*
+%{_mandir}/man1/kjs5.1*
 
 %files devel
 %defattr(644,root,root,755)
