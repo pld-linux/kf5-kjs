@@ -1,15 +1,15 @@
-%define		kdeframever	5.39
-%define		qtver		5.3.2
+%define		kdeframever	5.53
+%define		qtver		5.9.0
 %define		kfname		kjs
 
 Summary:	Javascript engine
 Name:		kf5-%{kfname}
-Version:	5.39.0
+Version:	5.53.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9a7c34d46a2ed351764e16028fc6cdee
+# Source0-md5:	14303adfba7c862f0a7f4761f90d079b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
