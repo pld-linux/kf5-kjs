@@ -1,15 +1,15 @@
-%define		kdeframever	5.56
+%define		kdeframever	5.59
 %define		qtver		5.9.0
 %define		kfname		kjs
 
 Summary:	Javascript engine
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	56101da043e93122262cf1ab1510fa4e
+# Source0-md5:	0badf520244190b8ec04e8df0e8664d9
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
@@ -77,6 +77,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libKF5JSApi.so.5
 %attr(755,root,root) %{_libdir}/libKF5JSApi.so.*.*
 %{_mandir}/man1/kjs5.1*
+%lang(ca) /usr/share/man/ca/man1/kjs5.1*
+%lang(de) /usr/share/man/de/man1/kjs5.1*
+%lang(es) /usr/share/man/es/man1/kjs5.1*
+%lang(it) /usr/share/man/it/man1/kjs5.1*
+%lang(nl) /usr/share/man/nl/man1/kjs5.1*
+%lang(pt) /usr/share/man/pt/man1/kjs5.1*
+%lang(pt_BR) /usr/share/man/pt_BR/man1/kjs5.1*
+%lang(sv) /usr/share/man/sv/man1/kjs5.1*
+%lang(uk) /usr/share/man/uk/man1/kjs5.1*
 
 %files devel
 %defattr(644,root,root,755)
