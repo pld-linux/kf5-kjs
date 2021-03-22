@@ -1,15 +1,15 @@
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver		5.9.0
 %define		kfname		kjs
 
 Summary:	Javascript engine
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	3df2c2ad1f05499252c249a5bb9381e3
+# Source0-md5:	87a9922336ad922dd4730b942cae4148
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
@@ -72,9 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kjs5
 %dir %{_datadir}/kf5/kjs
 %{_datadir}/kf5/kjs/create_hash_table
-%attr(755,root,root) %ghost %{_libdir}/libKF5JS.so.5
+%ghost %{_libdir}/libKF5JS.so.5
 %attr(755,root,root) %{_libdir}/libKF5JS.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/libKF5JSApi.so.5
+%ghost %{_libdir}/libKF5JSApi.so.5
 %attr(755,root,root) %{_libdir}/libKF5JSApi.so.*.*
 %{_mandir}/man1/kjs5.1*
 %lang(ca) /usr/share/man/ca/man1/kjs5.1*
@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/KF5/wtf
 %{_includedir}/KF5/kjs_version.h
 %{_libdir}/cmake/KF5JS
-%attr(755,root,root) %{_libdir}/libKF5JS.so
-%attr(755,root,root) %{_libdir}/libKF5JSApi.so
+%{_libdir}/libKF5JS.so
+%{_libdir}/libKF5JSApi.so
 %{qt5dir}/mkspecs/modules/qt_KJS.pri
 %{qt5dir}/mkspecs/modules/qt_KJSApi.pri
