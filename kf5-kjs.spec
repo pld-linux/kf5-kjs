@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.112
+%define		kdeframever	5.113
 %define		qtver		5.15.2
 %define		kfname		kjs
 
 Summary:	Javascript engine
 Name:		kf5-%{kfname}
-Version:	5.112.0
+Version:	5.113.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/portingAids/%{kfname}-%{version}.tar.xz
-# Source0-md5:	bf387c842886b17904aecf1d82d5a5fd
+# Source0-md5:	9ed05a72f505238e7ddf605c8f4744ee
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
